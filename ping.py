@@ -17,7 +17,7 @@ def ping(denodo_home_path: str, trust_path: str, hostname: str, timeout: str, vd
         os.path.join(lib_path_vdp, "contrib", "log4j-core.jar")
     ])
     
-    conf_path_vdp = os.path.join(config.denodo_home_path, "conf")
+    conf_path_vdp = os.path.join(denodo_home_path, "conf")
     dbtools_path = os.path.join(conf_path_vdp, "db-tools")
     if os.path.exists(conf_path_vdp) and not os.path.exists(dbtools_path):
         denodo_classpath = os.pathsep.join([denodo_classpath, conf_path_vdp])
